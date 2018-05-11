@@ -1,6 +1,0 @@
-{
-    "parent":"zachsmods:item/standardItem",
-    "textures": {
-        "layer0":"zachsmods:items/bluestoneDust"
-    }
-}
