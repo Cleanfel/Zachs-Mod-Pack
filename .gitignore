@@ -24,3 +24,6 @@ hs_err_pid*
 
 # Period files
 .*
+
+# Forge files
+Forge_*
