@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+       "down": "zachsmods:blocks/titaniumOre",
+         "up": "zachsmods:blocks/titaniumOre",
+      "north": "zachsmods:blocks/titaniumOre",
+      "south": "zachsmods:blocks/titaniumOre",
+       "west": "zachsmods:blocks/titaniumOre",
+       "east": "zachsmods:blocks/titaniumOre",
+   "particle": "zachsmods:blocks/titaniumOre"
+  }
+}

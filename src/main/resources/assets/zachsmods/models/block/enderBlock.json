@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+       "down": "zachsmods:blocks/enderBlock",
+         "up": "zachsmods:blocks/enderBlock",
+      "north": "zachsmods:blocks/enderBlock",
+      "south": "zachsmods:blocks/enderBlock",
+       "west": "zachsmods:blocks/enderBlock",
+       "east": "zachsmods:blocks/enderBlock",
+   "particle": "zachsmods:blocks/enderBlock"
+  }
+}

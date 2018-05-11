@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+       "down": "zachsmods:blocks/diceBlock5",
+         "up": "zachsmods:blocks/diceBlock0",
+      "north": "zachsmods:blocks/diceBlock1",
+      "south": "zachsmods:blocks/diceBlock4",
+       "west": "zachsmods:blocks/diceBlock3",
+       "east": "zachsmods:blocks/diceBlock2",
+   "particle": "zachsmods:blocks/diceBlock2"
+  }
+}

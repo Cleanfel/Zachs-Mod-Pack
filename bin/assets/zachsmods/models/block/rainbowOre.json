@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+       "down": "zachsmods:blocks/rainbowOre",
+         "up": "zachsmods:blocks/rainbowOre",
+      "north": "zachsmods:blocks/rainbowOre",
+      "south": "zachsmods:blocks/rainbowOre",
+       "west": "zachsmods:blocks/rainbowOre",
+       "east": "zachsmods:blocks/rainbowOre",
+   "particle": "zachsmods:blocks/rainbowOre"
+  }
+}
