@@ -20,7 +20,7 @@ public class RainbowOreWorldGen implements IWorldGenerator {
 		switch (world.provider.getDimension()) {
 	    case 0: //Overworld
 	    	
-	    	this.runGenerator(this.rainbowOre, world, random, chunkX, chunkZ, 5, 0, 24);
+	    	this.runGenerator(this.rainbowOre, world, random, chunkX, chunkZ, 15, 0, 24);
 
 	        break;
 	    case -1: //Nether

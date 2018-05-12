@@ -1,12 +1,6 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-       "down": "zachsmods:blocks/titaniumBlock",
-         "up": "zachsmods:blocks/titaniumBlock",
-      "north": "zachsmods:blocks/titaniumBlock",
-      "south": "zachsmods:blocks/titaniumBlock",
-       "west": "zachsmods:blocks/titaniumBlock",
-       "east": "zachsmods:blocks/titaniumBlock",
-   "particle": "zachsmods:blocks/titaniumBlock"
+       "all": "zachsmods:blocks/titaniumBlock"
   }
 }

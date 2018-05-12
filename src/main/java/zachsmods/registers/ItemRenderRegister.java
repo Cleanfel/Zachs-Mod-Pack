@@ -23,7 +23,7 @@ public class ItemRenderRegister {
 	    
 	    reg(ModItems.titaniumSword);
 	    reg(ModItems.titaniumPickaxe);
-	    //reg(ModItems.titaniumAxe);
+	    reg(ModItems.titaniumAxe);
 	    reg(ModItems.titaniumShovel);
 	    reg(ModItems.titaniumHoe);
 	    

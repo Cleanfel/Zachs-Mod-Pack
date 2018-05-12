@@ -53,13 +53,13 @@ public final class ModItems {
 	public static ArmorMaterial TitaniumArmorMaterial = EnumHelper.addArmorMaterial("TitaniumArmorMaterial", "zachsmods:titanium", 40, new int[] {3, 8, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
 	public static ItemArmor titaniumHelmet = new TitaniumArmor("titaniumHelmet", TitaniumArmorMaterial, 1, EntityEquipmentSlot.HEAD);
 	public static ItemArmor titaniumChestplate = new TitaniumArmor("titaniumChestplate", TitaniumArmorMaterial, 1, EntityEquipmentSlot.CHEST);
-	public static ItemArmor titaniumLeggings = new TitaniumArmor("titaniumLeggings", TitaniumArmorMaterial, 1, EntityEquipmentSlot.LEGS);
+	public static ItemArmor titaniumLeggings = new TitaniumArmor("titaniumLeggings", TitaniumArmorMaterial, 2, EntityEquipmentSlot.LEGS);
 	public static ItemArmor titaniumBoots = new TitaniumArmor("titaniumBoots", TitaniumArmorMaterial, 1, EntityEquipmentSlot.FEET);
 
 	public static ToolMaterial TitaniumToolMaterial = EnumHelper.addToolMaterial("TitaniumToolMaterial", 4, 2000, 13.0F, 4.0F, 30);
 	public static Item titaniumSword = new TitaniumSword("titaniumSword", TitaniumToolMaterial);
 	public static Item titaniumShovel = new TitaniumShovel("titaniumShovel", TitaniumToolMaterial);
-	//public static Item titaniumAxe = new TitaniumAxe("titaniumAxe", TitaniumToolMaterial);
+	public static Item titaniumAxe = new TitaniumAxe("titaniumAxe", TitaniumToolMaterial, 8, 0);
 	public static Item titaniumPickaxe = new TitaniumPickaxe("titaniumPickaxe", TitaniumToolMaterial);
 	public static Item titaniumHoe = new TitaniumHoe("titaniumHoe", TitaniumToolMaterial);
 
@@ -69,7 +69,7 @@ public final class ModItems {
 	public static ArmorMaterial ObsidianArmorMaterial = EnumHelper.addArmorMaterial("ObsidianArmorMaterial", "zachsmods:obsidian", 100, new int[] {3, 8, 6, 3}, 30, SoundEvents.BLOCK_ANVIL_FALL, 0);
 	public static ItemArmor obsidianHelmet = new ObsidianArmor("obsidianHelmet", ObsidianArmorMaterial, 1, EntityEquipmentSlot.HEAD);
 	public static ItemArmor obsidianChestplate = new ObsidianArmor("obsidianChestplate", ObsidianArmorMaterial, 1, EntityEquipmentSlot.CHEST);
-	public static ItemArmor obsidianLeggings = new ObsidianArmor("obsidianLeggings", ObsidianArmorMaterial, 1, EntityEquipmentSlot.LEGS);
+	public static ItemArmor obsidianLeggings = new ObsidianArmor("obsidianLeggings", ObsidianArmorMaterial, 2, EntityEquipmentSlot.LEGS);
 	public static ItemArmor obsidianBoots = new ObsidianArmor("obsidianBoots", ObsidianArmorMaterial, 1, EntityEquipmentSlot.FEET);
     
     public static void createItems() {
@@ -101,7 +101,7 @@ public final class ModItems {
 
 		GameRegistry.registerItem(titaniumSword, "titaniumSword");
 		GameRegistry.registerItem(titaniumShovel, "titaniumShovel");
-		//GameRegistry.registerItem(titaniumAxe, "titaniumAxe");
+		GameRegistry.registerItem(titaniumAxe, "titaniumAxe");
 		GameRegistry.registerItem(titaniumPickaxe, "titaniumPickaxe");
 		GameRegistry.registerItem(titaniumHoe, "titaniumHoe");
 		

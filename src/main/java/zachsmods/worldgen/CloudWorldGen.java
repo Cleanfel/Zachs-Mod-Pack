@@ -38,7 +38,7 @@ public class CloudWorldGen implements IWorldGenerator {
 
 	public CloudWorldGen() {
 		int size = (int)(Math.random() * 40);
-	    this.cloud = new WorldGenMinable(ModBlocks.cloud.getDefaultState(), 55, BlockStateMatcher.forBlock(Blocks.AIR));
+	    this.cloud = new WorldGenMinable(ModBlocks.cloud.getDefaultState(), 5, BlockStateMatcher.forBlock(Blocks.AIR));
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

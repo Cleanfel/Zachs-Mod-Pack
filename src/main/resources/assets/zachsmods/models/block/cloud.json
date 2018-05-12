@@ -1,12 +1,6 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-       "down": "zachsmods:blocks/cloud",
-         "up": "zachsmods:blocks/cloud",
-      "north": "zachsmods:blocks/cloud",
-      "south": "zachsmods:blocks/cloud",
-       "west": "zachsmods:blocks/cloud",
-       "east": "zachsmods:blocks/cloud",
-   "particle": "zachsmods:blocks/cloud"
+       "all": "zachsmods:blocks/cloud"
   }
 }

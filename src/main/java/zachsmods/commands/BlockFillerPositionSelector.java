@@ -23,7 +23,7 @@ public class BlockFillerPositionSelector {
 			return;
 		}
 		
-		Action action = event.getAction();
+		Action action = event.action;
 		if (action == Action.LEFT_CLICK_BLOCK) {
 			pos1.clear();
 			pos1.add(event.getPos().getX());
