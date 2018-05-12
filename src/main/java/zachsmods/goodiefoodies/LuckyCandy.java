@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -24,70 +25,82 @@ public class LuckyCandy extends ItemFood {
 	public void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
 		if (!world.isRemote) {
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 1200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 1200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.digSlowdown.id, 1200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 1200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.heal.id, 600, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 600, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.harm.id, 600, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 600, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.jump.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.confusion.id, 300, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.resistance.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 600, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 600, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 600, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 600, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.invisibility.id, 1200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, 1200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.blindness.id, 300, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 300, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 1200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.hunger.id, 200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.poison.id, 200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.POISON, 200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.wither.id, 200, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 0));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.healthBoost.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.absorption.id, 1200, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 1200, 1));
 			}
 			if(randomValue() == 1) {
-				player.addPotionEffect(new PotionEffect(Potion.saturation.id, 300, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.SATURATION, 300, 1));
+			}
+			if(randomValue() == 1) {
+				player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 800, 1));
+			}
+			if(randomValue() == 1) {
+				player.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 500, 1));
+			}
+			if(randomValue() == 1) {
+				player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 1200, 1));
+			}
+			if(randomValue() == 1) {
+				player.addPotionEffect(new PotionEffect(MobEffects.UNLUCK, 1000, 1));
 			}
 	    }
 	}

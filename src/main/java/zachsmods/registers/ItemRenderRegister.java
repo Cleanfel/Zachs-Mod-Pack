@@ -1,14 +1,11 @@
 package zachsmods.registers;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.main.Main;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import zachsmods.main.Main;
 
 public class ItemRenderRegister {
-
-	public static String modid = Main.MODID;
 
 	public static void registerItemRenderer() {
 	   
@@ -26,7 +23,7 @@ public class ItemRenderRegister {
 	    
 	    reg(ModItems.titaniumSword);
 	    reg(ModItems.titaniumPickaxe);
-	    reg(ModItems.titaniumAxe);
+	    //reg(ModItems.titaniumAxe);
 	    reg(ModItems.titaniumShovel);
 	    reg(ModItems.titaniumHoe);
 	    
@@ -50,6 +47,6 @@ public class ItemRenderRegister {
 
 	public static void reg(Item item) {
 	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-	    .register(item, 0, new ModelResourceLocation(modid + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	    .register(item, 0, new ModelResourceLocation("zachsmods" + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 }

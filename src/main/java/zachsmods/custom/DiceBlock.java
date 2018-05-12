@@ -8,16 +8,17 @@ import zachsmods.main.Main;
 
 import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 
 public class DiceBlock extends Block {
 
 	public DiceBlock(String unlocalizedName) {
-		super(Material.sponge);
+		super(Material.SPONGE);
 		this.setUnlocalizedName("diceBlock");
 		this.setCreativeTab(Main.zachsBlocks);
 		this.setResistance(2.0F);
 		this.setHardness(1.0F);
 		this.setLightLevel(0.0F);
-		this.setStepSound(soundTypeCloth);
+		this.setSoundType(SoundType.CLOTH);
 	}
 }

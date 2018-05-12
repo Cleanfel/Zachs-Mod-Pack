@@ -1,8 +1,8 @@
 package zachsmods.tutorial;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -10,9 +10,9 @@ public class DiamondMiner {
 
 @SubscribeEvent
 	public void sendMessage(BreakEvent event){
-	if (event.state.getBlock() != Blocks.diamond_ore) {
+	if (event.getState().getBlock() != Blocks.DIAMOND_ORE) {
 		return;
 	}
-		event.getPlayer().addChatComponentMessage(new ChatComponentText(EnumChatFormatting.AQUA +"There's diamonds in them hills!"));
+		event.getPlayer().addChatComponentMessage(new TextComponentString(TextFormatting.AQUA +"There's diamonds in them hills!"));
 	}
 }

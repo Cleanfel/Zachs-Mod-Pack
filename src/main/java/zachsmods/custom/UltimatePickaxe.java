@@ -1,10 +1,9 @@
 package zachsmods.custom;
 
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import zachsmods.main.Main;
@@ -15,6 +14,7 @@ public class UltimatePickaxe extends ItemPickaxe {
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
 		setCreativeTab(Main.zachsTools);
+		this.setMaxStackSize(1);
 	}
 	
 	@Override
@@ -22,10 +22,10 @@ public class UltimatePickaxe extends ItemPickaxe {
 		super.onUpdate(stack, world, entity, par4, par5);
 		{
 			EntityPlayer player = (EntityPlayer) entity;
-			ItemStack equipped = player.getCurrentEquippedItem();
+			ItemStack equipped = player.getHeldItemMainhand();
 			if(equipped == stack) {
-				player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1, 0));
-				player.addPotionEffect(new PotionEffect(Potion.digSpeed.getId(), 1, 2));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 1, 2));
 			}
 		}
 	}

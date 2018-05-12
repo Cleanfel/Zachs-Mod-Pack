@@ -12,36 +12,30 @@ import zachsmods.tutorial.RainbowOre;
 
 public class ModBlocks {
 
-	public static Block bluestone;
+	public static Block bluestone = new Bluestone("bluestone");
     
-    public static Block enderBlock;
+    public static Block enderBlock = new EnderBlock("enderBlock");
 
-	public static Block titaniumOre;
-	public static Block titaniumBlock;
+	public static Block titaniumOre = new TitaniumOre("titaniumOre");
+	public static Block titaniumBlock = new TitaniumBlock("titaniumBlock");
 	
-	public static Block diceBlock;
+	public static Block diceBlock = new DiceBlock("diceBlock");
 	
-	public static Block rainbowOre;
+	public static Block rainbowOre = new RainbowOre("rainbowOre");
 	
-	public static Block cloud;
+	public static Block cloud = new CloudBlock("cloud");
 
 	public static Block whiteCobblestone;
 	public static Block blackCobblestone;
 
     public static void createBlocks() {
     	
-        GameRegistry.registerBlock(bluestone = new Bluestone("bluestone"), "bluestone");
-        
-        GameRegistry.registerBlock(enderBlock = new EnderBlock("enderBlock"), "enderBlock");
-        
-        GameRegistry.registerBlock(titaniumOre = new TitaniumOre("titaniumOre"), "titaniumOre");
-        
-        GameRegistry.registerBlock(titaniumBlock = new TitaniumBlock("titaniumBlock"), "titaniumBlock");
-        
-        GameRegistry.registerBlock(diceBlock = new DiceBlock("diceBlock"), "diceBlock");
-        
-        GameRegistry.registerBlock(rainbowOre = new RainbowOre("rainbowOre"), "rainbowOre");
-        
-        GameRegistry.registerBlock(cloud = new CloudBlock("cloud"), "cloud");
+    	GameRegistry.registerBlock(bluestone, "bluestone");
+        GameRegistry.registerBlock(enderBlock, "enderBlock");
+        GameRegistry.registerBlock(titaniumOre, "titaniumOre");
+        GameRegistry.registerBlock(titaniumBlock, "titaniumBlock");
+        GameRegistry.registerBlock(diceBlock, "diceBlock");
+        GameRegistry.registerBlock(rainbowOre, "rainbowOre");
+        GameRegistry.registerBlock(cloud, "cloud");
     }
 }

@@ -14,9 +14,9 @@ public class ModCrafting {
 //------------- =+= CUSTOM CRAFTING =+= -------------//
 		
 //		Craft dirt into cobblestone recipe
-		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone),
+		GameRegistry.addRecipe(new ItemStack(Blocks.COBBLESTONE),
 				"dd",
-				"dd", 'd', Blocks.dirt);
+				"dd", 'd', Blocks.DIRT);
 		
 //		Craft bluestone dust into bluestone recipe
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.bluestone),
@@ -33,7 +33,7 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.enderBlock),
 				"e e",
 				" o ",
-				"e e", 'o', Blocks.obsidian, 'e', Items.ender_eye);
+				"e e", 'o', Blocks.OBSIDIAN, 'e', Items.ENDER_EYE);
 		
 //		Craft Ender Block into Ender Ingots recipe
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.enderIngot, 9),
@@ -41,7 +41,7 @@ public class ModCrafting {
 		
 //		Craft Ender Block, iron ingot, gold ingot into Ender Ingot
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.enderIngot, 12),
-				new ItemStack(ModBlocks.enderBlock, 1), new ItemStack(Items.iron_ingot), new ItemStack(Items.gold_ingot));
+				new ItemStack(ModBlocks.enderBlock, 1), new ItemStack(Items.IRON_INGOT), new ItemStack(Items.GOLD_INGOT));
 		
 //		Craft Titanium Ingots into the Titanium Armor set
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumHelmet),
@@ -64,76 +64,76 @@ public class ModCrafting {
 		
 //		Craft a bunch of ingredients into Sushi
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sushi, 2),
-				new ItemStack(Items.water_bucket), new ItemStack(Items.paper), new ItemStack(Items.sugar), new ItemStack(Items.reeds), new ItemStack(Items.fish));
+				new ItemStack(Items.WATER_BUCKET), new ItemStack(Items.PAPER), new ItemStack(Items.SUGAR), new ItemStack(Items.REEDS), new ItemStack(Items.FISH));
 		
 //		Craft a bunch of ingredients into Carrot Soup
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.carrotSoup, 1),
-				new ItemStack(Items.bowl), new ItemStack(Items.milk_bucket), new ItemStack(Items.carrot), new ItemStack(Items.reeds), new ItemStack(Items.egg), new ItemStack(Blocks.brown_mushroom));
+				new ItemStack(Items.BOWL), new ItemStack(Items.MILK_BUCKET), new ItemStack(Items.CARROT), new ItemStack(Items.REEDS), new ItemStack(Items.EGG), new ItemStack(Blocks.BROWN_MUSHROOM));
 		
 //		Craft a bunch of ingredients into Tomato Soup
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tomatoSoup, 1),
-				new ItemStack(Items.milk_bucket), new ItemStack(Items.water_bucket), new ItemStack(Items.reeds), new ItemStack(ModItems.tomato), new ItemStack(Items.bowl));
+				new ItemStack(Items.MILK_BUCKET), new ItemStack(Items.WATER_BUCKET), new ItemStack(Items.REEDS), new ItemStack(ModItems.tomato), new ItemStack(Items.BOWL));
 		
 //		Craft obsidian and dragon eggs into the Obsidian Armor set
 		GameRegistry.addRecipe(new ItemStack(ModItems.obsidianHelmet),
 				"ooo",
-				"oso", 'o', Blocks.obsidian, 's', Items.nether_star);
+				"oso", 'o', Blocks.OBSIDIAN, 's', Items.NETHER_STAR);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.obsidianChestplate),
 				"oso",
 				"ooo",
-				"ooo", 'o', Blocks.obsidian, 's', Items.nether_star);
+				"ooo", 'o', Blocks.OBSIDIAN, 's', Items.NETHER_STAR);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.obsidianLeggings),
 				"ooo",
 				"oso",
-				"o o", 'o', Blocks.obsidian, 's', Items.nether_star);
+				"o o", 'o', Blocks.OBSIDIAN, 's', Items.NETHER_STAR);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.obsidianBoots),
 				"o o",
-				"oso", 'o', Blocks.obsidian, 's', Items.nether_star);
+				"oso", 'o', Blocks.OBSIDIAN, 's', Items.NETHER_STAR);
 		
 //		Craft Titanium Ingots and blaze rods into the Titanium Tools set
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumSword),
 				"t",
 				"t",
-				"b", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				"b", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumShovel),
 				"t",
 				"b",
-				"b", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				"b", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumPickaxe),
 				"ttt",
 				" b ",
-				" b ", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				" b ", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);
 		
-		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumAxe),
+		/*GameRegistry.addRecipe(new ItemStack(ModItems.titaniumAxe),
 				"tt",
 				"tb",
-				" b", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				" b", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD)*/
 		
-		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumAxe),
+		/*GameRegistry.addRecipe(new ItemStack(ModItems.titaniumAxe),
 				"tt",
 				"bt",
-				"b ", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				"b ", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);*/
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumHoe),
 				"tt",
 				"b ",
-				"b ", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				"b ", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.titaniumHoe),
 				"tt",
 				" b",
-				" b", 't', ModItems.titaniumIngot, 'b', Items.blaze_rod);
+				" b", 't', ModItems.titaniumIngot, 'b', Items.BLAZE_ROD);
 		
 //		Craft Titanium Blocks and obsidian into The Ultimate Pickaxe
 		GameRegistry.addRecipe(new ItemStack(ModItems.theUltimatePickaxe),
 				"ooo",
 				" t ",
-				" t ", 'o', Blocks.obsidian, 't', ModBlocks.titaniumBlock);
+				" t ", 'o', Blocks.OBSIDIAN, 't', ModBlocks.titaniumBlock);
 		
 //		Craft Titanium ingots into Titanium Blocks
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.titaniumBlock),
@@ -145,28 +145,28 @@ public class ModCrafting {
 				new ItemStack(ModBlocks.titaniumBlock));
 		
 //		Craft some items into a name tag
-		GameRegistry.addRecipe(new ItemStack(Items.name_tag),
+		GameRegistry.addRecipe(new ItemStack(Items.NAME_TAG),
 				" il",
 				"igi",
-				"ii ", 'i', Items.iron_ingot, 'g', Blocks.gold_block, 'l', Items.lead);
+				"ii ", 'i', Items.IRON_INGOT, 'g', Blocks.GOLD_BLOCK, 'l', Items.LEAD);
 		
 //		Craft some items into a saddle
-		GameRegistry.addRecipe(new ItemStack(Items.saddle),
+		GameRegistry.addRecipe(new ItemStack(Items.SADDLE),
 				"l l",
 				"ili",
-				"rir", 'l', Items.leather, 'i', Items.iron_ingot, 'r', Items.lead);
+				"rir", 'l', Items.LEATHER, 'i', Items.IRON_INGOT, 'r', Items.LEAD);
 		
 //		Craft some materials into a Dice block
 		GameRegistry.addRecipe(
 				new ItemStack(ModBlocks.diceBlock),
 				"qqq",
 				"qiq",
-				"qqq", 'q', Items.quartz, 'i', Items.dye);
+				"qqq", 'q', Items.QUARTZ, 'i', Items.DYE);
 		
 //------------- =+= CUSTOM SMELTING =+= -------------//	
 		
 //		Smelting ender pearls into Ender Ingot
-		GameRegistry.addSmelting(Items.ender_pearl, new ItemStack(ModItems.enderIngot, 1), 1.0F);
+		GameRegistry.addSmelting(Items.ENDER_PEARL, new ItemStack(ModItems.enderIngot, 1), 1.0F);
 		
 //		Smelting Titanium Ore into Titanium Ingots
 		GameRegistry.addSmelting(ModBlocks.titaniumOre, new ItemStack(ModItems.titaniumIngot, 3), 1.0F);
@@ -175,12 +175,12 @@ public class ModCrafting {
 		GameRegistry.addSmelting(ModItems.titaniumChunk, new ItemStack(ModItems.titaniumIngot), 1.0F);
 		
 //		Smelting Titanium Chunks into Titanium Ingots
-		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 3), new ItemStack(ModItems.chocolate), 0.4F);
+		GameRegistry.addSmelting(new ItemStack(Items.DYE, 1, 3), new ItemStack(ModItems.chocolate), 0.4F);
 		
 //------------- =+= CUSTOM BREWING =+= -------------//		
 		
 //		Brew cake to make potions of strength
-		Items.cake.setPotionEffect(PotionHelper.blazePowderEffect + "+6" + "+14");
+		//Items.CAKE.setPotionEffect(PotionHelper.blazePowderEffect + "+6" + "+14");
 				
 	}	
 }

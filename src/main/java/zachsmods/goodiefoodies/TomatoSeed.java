@@ -8,7 +8,7 @@ import zachsmods.registers.ModCrops;
 public class TomatoSeed extends ItemSeeds {
 	
 	public TomatoSeed(String unlocalizedName) {
-		super(ModCrops.tomatoCrop, Blocks.farmland);
+		super(ModCrops.tomatoCrop, Blocks.FARMLAND);
 		setUnlocalizedName("tomatoSeeds");
 		setCreativeTab(Main.zachsGoodieFoodies);
 	}

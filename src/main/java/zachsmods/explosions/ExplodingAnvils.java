@@ -1,6 +1,5 @@
 package zachsmods.explosions;
 
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
@@ -11,12 +10,11 @@ public class ExplodingAnvils {
 	
 	@SubscribeEvent
 	public void explode(LivingHurtEvent event) {
-		if(event.source != DamageSource.anvil) {
+		if(event.getSource() != DamageSource.anvil) {
 			return;
 		}
 		
-		Entity entity = event.entity;
-		event.entity.worldObj.createExplosion(
-				entity, entity.posX, entity.posY, entity.posZ, 4, false);
+		Entity entity = event.getEntity();
+		event.getEntity().worldObj.createExplosion(entity, entity.posX, entity.posY, entity.posZ, 4, false);
 	}
 }

@@ -2,10 +2,11 @@ package zachsmods.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -15,9 +16,9 @@ import zachsmods.registers.ModBlocks;
 public class EnderBlockWorldGen implements IWorldGenerator {
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 	    
-		switch (world.provider.getDimensionId()) {
+		switch (world.provider.getDimension()) {
 	    case 0: //Overworld
 
 	        break;
@@ -36,7 +37,7 @@ public class EnderBlockWorldGen implements IWorldGenerator {
 	private WorldGenerator enderBlock; //Generates ender blocks
 
 	public EnderBlockWorldGen() {
-	    this.enderBlock = new WorldGenMinable(ModBlocks.enderBlock.getDefaultState(), 12, BlockHelper.forBlock(Blocks.end_stone));
+	    this.enderBlock = new WorldGenMinable(ModBlocks.enderBlock.getDefaultState(), 12, BlockStateMatcher.forBlock(Blocks.END_STONE));
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

@@ -2,12 +2,12 @@ package zachsmods.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import zachsmods.registers.ModBlocks;
@@ -15,9 +15,9 @@ import zachsmods.registers.ModBlocks;
 public class RainbowOreWorldGen implements IWorldGenerator {
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 	    
-		switch (world.provider.getDimensionId()) {
+		switch (world.provider.getDimension()) {
 	    case 0: //Overworld
 	    	
 	    	this.runGenerator(this.rainbowOre, world, random, chunkX, chunkZ, 5, 0, 24);
@@ -36,7 +36,7 @@ public class RainbowOreWorldGen implements IWorldGenerator {
 	private WorldGenerator rainbowOre; //Generates rainbow ore
 
 	public RainbowOreWorldGen() {
-	    this.rainbowOre = new WorldGenSingleMinable(ModBlocks.rainbowOre.getDefaultState(), BlockHelper.forBlock(Blocks.dirt));
+	    this.rainbowOre = new WorldGenSingleMinable(ModBlocks.rainbowOre.getDefaultState(), BlockStateMatcher.forBlock(Blocks.DIRT));
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

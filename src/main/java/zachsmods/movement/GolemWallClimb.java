@@ -9,15 +9,14 @@ public class GolemWallClimb {
 
 	@SubscribeEvent
 	public void climbWall(LivingUpdateEvent event) {
-		if (!(event.entity instanceof EntitySnowman) &&
-		!(event.entity instanceof EntityIronGolem)) {
+		if (!(event.getEntity() instanceof EntitySnowman) && !(event.getEntity() instanceof EntityIronGolem)) {
 			return;
 		}
 		
-		if(!event.entity.isCollidedHorizontally) {
+		if(!event.getEntity().isCollidedHorizontally) {
 			return;
 		}
 		
-		event.entity.motionY = 0.5;
+		event.getEntity().motionY = 0.5;
 	}
 }

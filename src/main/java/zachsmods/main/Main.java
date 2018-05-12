@@ -18,6 +18,7 @@ import zachsmods.entities.PigsDroppingDiamonds;
 import zachsmods.entities.SkeletonCookies;
 import zachsmods.entities.ZombieKnights;
 import zachsmods.explosions.BiggerTNTExplosions;
+import zachsmods.explosions.BiggerTNTExplosionsv2;
 import zachsmods.explosions.DiamondOreTrap;
 import zachsmods.explosions.ExplodingAnvils;
 import zachsmods.explosions.ExplodingMinecarts;
@@ -26,6 +27,7 @@ import zachsmods.movement.BouncySponges;
 import zachsmods.movement.GolemWallClimb;
 import zachsmods.movement.GravityExpert;
 import zachsmods.movement.Parachute;
+import zachsmods.movement.SuperJump;
 import zachsmods.tabs.TabOfBlocks;
 import zachsmods.tabs.TabOfFoods;
 import zachsmods.tabs.TabOfSpecialMaterials;
@@ -33,11 +35,11 @@ import zachsmods.tabs.TabOfTools;
 import zachsmods.tutorial.BlockBreakMessage;
 import zachsmods.tutorial.DiamondMiner;
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
+@Mod(modid = Main.MOD_ID, name = Main.MOD_NAME, version = Main.VERSION)
 public class Main {
 
-	public static final String MODID = "ZachsMods";
-	public static final String MODNAME = "Zach's Mods";
+	public static final String MOD_ID = "zachsmods";
+	public static final String MOD_NAME = "Zach's Mod Pack";
 	public static final String VERSION = "1.0.0";
 	
 	@Instance
@@ -82,7 +84,7 @@ public class Main {
 		FMLCommonHandler.instance().bus().register(new Parachute());
 		MinecraftForge.EVENT_BUS.register(new Parachute());
 		MinecraftForge.EVENT_BUS.register(new GolemWallClimb());
-		MinecraftForge.EVENT_BUS.register(new BlockFillerPositionSelector());
+//		MinecraftForge.EVENT_BUS.register(new BlockFillerPositionSelector());
 		MinecraftForge.EVENT_BUS.register(new SkeletonCookies());
 		MinecraftForge.EVENT_BUS.register(new RedstonePower());
 		MinecraftForge.EVENT_BUS.register(new DiamondMiner());
@@ -101,7 +103,7 @@ public class Main {
 	@EventHandler
 	public void registerCommands(FMLServerStartingEvent event) {
 		event.registerServerCommand(new FlamingPigs());
-		event.registerServerCommand(new BlockFillCommand());
+		//event.registerServerCommand(new BlockFillCommand());
 		
 	}
 }

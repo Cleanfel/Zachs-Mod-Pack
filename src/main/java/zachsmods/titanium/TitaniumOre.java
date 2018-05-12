@@ -11,7 +11,7 @@ import zachsmods.registers.ModItems;
 
 public class TitaniumOre extends Block {
 	public TitaniumOre(String unlocalizedName) {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.setUnlocalizedName("titaniumOre");
 		this.setCreativeTab(Main.zachsBlocks);
 		this.setResistance(5.0F);

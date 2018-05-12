@@ -6,6 +6,7 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -15,48 +16,47 @@ public class SkeletonCookies {
 	
 	@SubscribeEvent
 	public void giveArmor(EntityJoinWorldEvent event){
-		if(!(event.entity instanceof EntitySkeleton)) {
+		if(!(event.getEntity() instanceof EntitySkeleton)) {
 			return;
 		}
 		
-		EntitySkeleton skeleton = (EntitySkeleton) event.entity;
-		
-		skeleton.setCurrentItemOrArmor(0, new ItemStack(Items.bow));
-		skeleton.setCurrentItemOrArmor(1, new ItemStack(Items.leather_chestplate));
-		skeleton.setCurrentItemOrArmor(2, new ItemStack(Items.leather_leggings));
-		skeleton.setCurrentItemOrArmor(3, new ItemStack(Items.leather_boots));
-		skeleton.setCurrentItemOrArmor(4, new ItemStack(Items.leather_helmet));
+		EntitySkeleton skeleton = (EntitySkeleton) event.getEntity();
+		skeleton.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
+		skeleton.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Items.LEATHER_CHESTPLATE));
+		skeleton.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Items.LEATHER_LEGGINGS));
+		skeleton.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
+		skeleton.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Items.LEATHER_HELMET));
 	}
 	
 	@SubscribeEvent
 	public void spawnReinforcements(LivingDeathEvent event){
-		if(!(event.entity instanceof EntityZombie)) {
+		if(!(event.getEntity() instanceof EntityZombie)) {
 			return;
 		}
 		
 		for (int i = 0 ; i < 1 ; i++) {
-			EntitySkeleton skeleton = new EntitySkeleton(event.entity.worldObj);
-			skeleton.setLocationAndAngles(event.entity.posX,
-					event.entity.posY,
-					event.entity.posZ,
+			EntitySkeleton skeleton = new EntitySkeleton(event.getEntity().worldObj);
+			skeleton.setLocationAndAngles(event.getEntity().posX,
+					event.getEntity().posY,
+					event.getEntity().posZ,
 					0,
 					0);
-			if (!event.entity.worldObj.isRemote) {
-				event.entity.worldObj.spawnEntityInWorld(skeleton);
+			if (!event.getEntity().worldObj.isRemote) {
+				event.getEntity().worldObj.spawnEntityInWorld(skeleton);
 			}
 		}
 	}
 	
 	@SubscribeEvent
 	public void dropCookies(LivingDeathEvent event) {
-		if (!(event.entity instanceof EntitySkeleton)) {
+		if (!(event.getEntity() instanceof EntitySkeleton)) {
 			return;
 		}
 		
 		Random random = new Random ();
 		
-		if (!event.entity.worldObj.isRemote) {
-			event.entity.dropItem(Items.cookie, random.nextInt(8));
+		if (!event.getEntity().worldObj.isRemote) {
+			event.getEntity().dropItem(Items.COOKIE, random.nextInt(8));
 		}
 	}
 }

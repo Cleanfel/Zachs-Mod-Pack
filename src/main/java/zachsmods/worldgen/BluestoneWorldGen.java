@@ -2,10 +2,11 @@ package zachsmods.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -15,9 +16,9 @@ import zachsmods.registers.ModBlocks;
 public class BluestoneWorldGen implements IWorldGenerator {
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 	    
-		switch (world.provider.getDimensionId()) {
+		switch (world.provider.getDimension()) {
 	    case 0: //Overworld
 	    	
 	    	this.runGenerator(this.bluestone, world, random, chunkX, chunkZ, 60, 0, 60);
@@ -36,7 +37,7 @@ public class BluestoneWorldGen implements IWorldGenerator {
 	private WorldGenerator bluestone; //Generates bluestone
 
 	public BluestoneWorldGen() {
-	    this.bluestone = new WorldGenMinable(ModBlocks.bluestone.getDefaultState(), 3, BlockHelper.forBlock(Blocks.gravel));
+	    this.bluestone = new WorldGenMinable(ModBlocks.bluestone.getDefaultState(), 3, BlockStateMatcher.forBlock(Blocks.GRAVEL));
 	}
 	
 	private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

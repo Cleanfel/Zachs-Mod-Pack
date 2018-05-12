@@ -2,7 +2,6 @@ package zachsmods.explosions;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityTNTPrimed;
-import net.minecraft.network.play.server.S42PacketCombatEvent.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -13,13 +12,11 @@ public class BiggerTNTExplosions {
 	
 	@SubscribeEvent
 	public void explode(EntityJoinWorldEvent event) {
-		if (!(event.entity instanceof EntityTNTPrimed)) {
+		if (!(event.getEntity() instanceof EntityTNTPrimed)) {
 			return;
 		}
 
-		Entity entity = event.entity;
-		event.entity.worldObj.createExplosion(entity,
-				entity.posX, entity.posY, entity.posZ,
-				power, true);
+		Entity entity = event.getEntity();
+		event.getEntity().worldObj.createExplosion(entity, entity.posX, entity.posY, entity.posZ, power, true);
 	}
 }

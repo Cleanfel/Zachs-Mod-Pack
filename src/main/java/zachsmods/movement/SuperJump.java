@@ -8,10 +8,10 @@ public class SuperJump {
 	
 	@SubscribeEvent
 	public void makeJumpHigher(LivingJumpEvent event){
-		if(!(event.entity instanceof EntityPlayer)) {
+		if(!(event.getEntity() instanceof EntityPlayer)) {
 			return;
 		}
 		
-		event.entity.motionY *=5;
+		event.getEntity().motionY *=5;
 	}
 }

@@ -9,7 +9,7 @@ public class GravityExpert {
 	
 	@SubscribeEvent
 	public void negateFallDamage(LivingFallEvent event) {
-		if (!(event.entity instanceof EntityPlayer)) {
+		if (!(event.getEntity() instanceof EntityPlayer)) {
 			return;
 		}
 		

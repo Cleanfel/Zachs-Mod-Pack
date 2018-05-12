@@ -17,34 +17,31 @@ public class BiggerTNTExplosionsv2 {
 	
 	@SubscribeEvent
 	public void SpawnTNTItem(EntityJoinWorldEvent event) {
-		if (!(event.entity instanceof EntityTNTPrimed)) {
+		if (!(event.getEntity() instanceof EntityTNTPrimed)) {
 			return;
 		}
 		
-		Entity entity = event.entity;
-		EntityItem explosion = new EntityItem(event.world,
-				entity.posX, entity.posY, entity.posZ,
-				new ItemStack(Blocks.tnt));
+		Entity entity = event.getEntity();
+		EntityItem explosion = new EntityItem(
+				event.getWorld(), entity.posX, entity.posY, entity.posZ, new ItemStack(Blocks.TNT));
 		explosion.setInfinitePickupDelay();
 		explosion.motionX = 0;
 		explosion.motionY = 0;
 		explosion.motionZ = 0;
 		explosion.lifespan = fuse * 20;
-		if (!event.world.isRemote) {
-			event.world.spawnEntityInWorld(explosion);
+		if (!event.getWorld().isRemote) {
+			event.getWorld().spawnEntityInWorld(explosion);
 		}
 	}
 	
 	@SubscribeEvent
 	public void explode(ItemExpireEvent event) {
-		if (event.entityItem.getEntityItem().getItem() !=
-				Item.getItemFromBlock(Blocks.tnt)) {
+		if (event.getEntityItem().getEntityItem().getItem() !=
+				Item.getItemFromBlock(Blocks.TNT)) {
 			return;
 		}
 		
-		Entity entity = event.entity;
-		event.entity.worldObj.createExplosion(entity,
-				entity.posX, entity.posY, entity.posZ,
-				power, true);
+		Entity entity = event.getEntity();
+		event.getEntity().worldObj.createExplosion(entity, entity.posX, entity.posY, entity.posZ, power, true);
 	}
 }
