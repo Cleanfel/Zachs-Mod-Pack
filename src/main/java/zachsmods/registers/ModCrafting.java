@@ -163,6 +163,20 @@ public class ModCrafting {
 				"qiq",
 				"qqq", 'q', Items.QUARTZ, 'i', Items.DYE);
 		
+//		Craft cobblestone and other materials into darkstone and lightstone
+		GameRegistry.addRecipe(
+				new ItemStack(ModBlocks.darkstone),
+				"c c",
+				" s ",
+				"c c", 'c', Items.COAL, 's', Blocks.COBBLESTONE);
+		
+		
+		GameRegistry.addRecipe(
+				new ItemStack(ModBlocks.lightstone),
+				"b b",
+				" s ",
+				"b b", 'b', Items.DYE, 1, 1, 's', Blocks.COBBLESTONE);
+		
 //------------- =+= CUSTOM SMELTING =+= -------------//	
 		
 //		Smelting ender pearls into Ender Ingot
@@ -174,7 +188,7 @@ public class ModCrafting {
 //		Smelting Titanium Chunks into Titanium Ingots
 		GameRegistry.addSmelting(ModItems.titaniumChunk, new ItemStack(ModItems.titaniumIngot), 1.0F);
 		
-//		Smelting Titanium Chunks into Titanium Ingots
+//		Smelting cocoa beans into chocolate
 		GameRegistry.addSmelting(new ItemStack(Items.DYE, 1, 3), new ItemStack(ModItems.chocolate), 0.4F);
 		
 //------------- =+= CUSTOM BREWING =+= -------------//		

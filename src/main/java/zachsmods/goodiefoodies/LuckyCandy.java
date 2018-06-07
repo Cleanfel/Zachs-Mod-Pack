@@ -106,6 +106,6 @@ public class LuckyCandy extends ItemFood {
 	}
 	
 	public int randomValue() {
-		return(int)(Math.random() * 4);
+		return(int)(Math.random() * 5);
 	}
 }
