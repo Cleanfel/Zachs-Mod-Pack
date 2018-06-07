@@ -2,7 +2,6 @@ package zachsmods.registers;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.main.Main;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
@@ -22,6 +21,9 @@ public class BlockRenderRegister {
 	    reg(ModBlocks.rainbowOre);
 	    
 	    reg(ModBlocks.cloud);
+	    
+	    reg(ModBlocks.darkstone);
+	    reg(ModBlocks.lightstone);
 	    
 	}
 

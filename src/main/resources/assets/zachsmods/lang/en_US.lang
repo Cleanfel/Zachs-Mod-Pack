@@ -25,6 +25,8 @@ item.theUltimatePickaxe.name=The Ultimate Pickaxe
 tile.diceBlock.name=Dice Block
 tile.rainbowOre.name=Rainbow Ore
 tile.cloud.name=Cloud
+tile.darkstone.name=Darkstone
+tile.lightstone.name=Lightstone
 
 item.sushi.name=Sushi
 item.carrotSoup.name=Carrot Soup

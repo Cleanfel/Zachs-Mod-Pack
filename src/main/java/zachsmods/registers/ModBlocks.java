@@ -3,7 +3,9 @@ package zachsmods.registers;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zachsmods.custom.CloudBlock;
+import zachsmods.custom.Darkstone;
 import zachsmods.custom.DiceBlock;
+import zachsmods.custom.Lightstone;
 import zachsmods.titanium.TitaniumBlock;
 import zachsmods.titanium.TitaniumOre;
 import zachsmods.tutorial.Bluestone;
@@ -25,8 +27,8 @@ public class ModBlocks {
 	
 	public static Block cloud = new CloudBlock("cloud");
 
-	public static Block whiteCobblestone;
-	public static Block blackCobblestone;
+	public static Block darkstone = new Darkstone("darkstone");
+	public static Block lightstone = new Lightstone("lightstone");
 
     public static void createBlocks() {
     	
@@ -37,5 +39,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(diceBlock, "diceBlock");
         GameRegistry.registerBlock(rainbowOre, "rainbowOre");
         GameRegistry.registerBlock(cloud, "cloud");
+        GameRegistry.registerBlock(darkstone, "darkstone");
+        GameRegistry.registerBlock(lightstone, "lightstone");
     }
 }
