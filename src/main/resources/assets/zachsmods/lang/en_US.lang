@@ -43,6 +43,11 @@ item.obsidianChestplate.name=Obsidian Chestplate
 item.obsidianLeggings.name=Obsidian Leggings
 item.obsidianBoots.name=Obsidian Boots
 
+item.emeraldHelmet.name=Emerald Helmet
+item.emeraldChestplate.name=Emerald Chestplate
+item.emeraldLeggings.name=Emerald Leggings
+item.emeraldBoots.name=Emerald Boots
+
 itemGroup.zachsBlocks=Zach's Blocks
 itemGroup.zachsSpecialMaterials=Zach's Special Materials
 itemGroup.zachsTools=Zach's Tools
