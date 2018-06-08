@@ -175,7 +175,7 @@ public class ModCrafting {
 				new ItemStack(ModBlocks.lightstone),
 				"b b",
 				" s ",
-				"b b", 'b', Items.DYE, 1, 1, 's', Blocks.COBBLESTONE);
+				"b b", 'b', (new ItemStack(Items.DYE, 1, 15)), 's', Blocks.COBBLESTONE);
 		
 //------------- =+= CUSTOM SMELTING =+= -------------//	
 		

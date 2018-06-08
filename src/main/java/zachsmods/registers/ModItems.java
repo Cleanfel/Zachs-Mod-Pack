@@ -71,6 +71,12 @@ public final class ModItems {
 	public static ItemArmor obsidianChestplate = new ObsidianArmor("obsidianChestplate", ObsidianArmorMaterial, 1, EntityEquipmentSlot.CHEST);
 	public static ItemArmor obsidianLeggings = new ObsidianArmor("obsidianLeggings", ObsidianArmorMaterial, 2, EntityEquipmentSlot.LEGS);
 	public static ItemArmor obsidianBoots = new ObsidianArmor("obsidianBoots", ObsidianArmorMaterial, 1, EntityEquipmentSlot.FEET);
+	
+	public static ArmorMaterial EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmorMaterial", "zachsmods:emerald", 30, new int[] {2, 6, 5, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0);
+	public static ItemArmor emeraldHelmet = new ObsidianArmor("emeraldHelmet", EmeraldArmorMaterial, 1, EntityEquipmentSlot.HEAD);
+	public static ItemArmor emeraldChestplate = new ObsidianArmor("emeraldChestplate", EmeraldArmorMaterial, 1, EntityEquipmentSlot.CHEST);
+	public static ItemArmor emeraldLeggings = new ObsidianArmor("emeraldLeggings", EmeraldArmorMaterial, 2, EntityEquipmentSlot.LEGS);
+	public static ItemArmor emeraldBoots = new ObsidianArmor("emeraldBoots", EmeraldArmorMaterial, 1, EntityEquipmentSlot.FEET);
     
     public static void createItems() {
     	
@@ -115,6 +121,13 @@ public final class ModItems {
 //------------- =+= REGISTERING OTHER TOOLS =+= -------------//
 		
 		GameRegistry.registerItem(theUltimatePickaxe, "theUltimatePickaxe");
+		
+//------------- =+= REGISTERING EMERALD ARMOR =+= -------------//
+		
+		GameRegistry.registerItem(emeraldHelmet, "emeraldHelmet");
+		GameRegistry.registerItem(emeraldChestplate, "emeraldChestplate");
+		GameRegistry.registerItem(emeraldLeggings, "emeraldLeggings");
+		GameRegistry.registerItem(emeraldBoots, "emeraldBoots");
 					    	
     }
 }

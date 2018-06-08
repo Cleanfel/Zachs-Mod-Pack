@@ -43,6 +43,11 @@ public class ItemRenderRegister {
 	    reg(ModItems.obsidianLeggings);
 	    reg(ModItems.obsidianBoots);
 	    
+	    reg(ModItems.emeraldHelmet);
+	    reg(ModItems.emeraldChestplate);
+	    reg(ModItems.emeraldLeggings);
+	    reg(ModItems.emeraldBoots);
+	    
 	}
 
 	public static void reg(Item item) {
